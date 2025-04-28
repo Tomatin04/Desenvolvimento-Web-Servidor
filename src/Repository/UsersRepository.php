@@ -10,7 +10,7 @@ class UsersRepository
 
     public function find(string $email):?array 
     {
-        $stmt = $this->pdo->prepare("SELECT * FROM users u WHERE email = :email");
+        $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->bindValue(':email', $email);
         $stmt->execute();
         return $stmt->fetch();

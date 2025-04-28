@@ -5,6 +5,9 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+}
 /* Cabeçalho */
 .cabecalho {
   display: flex;
@@ -173,15 +176,33 @@
   cursor: pointer;
 }
 
-.login-link a {
+.login-area {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.login-link {
   color: white;
   text-decoration: none;
   font-weight: bold;
   font-size: 16px;
 }
 
-.login-link a:hover {
-  text-decoration: underline;
+.logout-btn {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.logout-btn:hover {
+  background-color: white;
+  color: #1f1f1f;
 }
 
 /* Estilo do container de login */

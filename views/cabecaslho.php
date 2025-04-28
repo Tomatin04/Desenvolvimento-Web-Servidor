@@ -7,10 +7,11 @@
 </head>
 <body>
   <header class="cabecalho">
-    <div class="menu-icono" onclick="alert('Menu clicado!')">
-      ☰
+    <div class="menu-icono" > <!-- onclick="alert('Menu clicado!')"-->
+      <a href="\" style="color: white">☰</a>
     </div>
-    <div class="login-link">
-      <a href="#">Login</a>
+    <div class="login-area">
+      <a class="logout-btn" href="\login" class="login-link">Login</a>
+      <a class="logout-btn" href="\logout">Logout</a>
     </div>
   </header>

@@ -10,10 +10,10 @@ class UserValidation
     {
         $repository = new UsersRepository($pdo);
         $userInfo = $repository->find($email);
-        if($userInfo !== null){
-            $correctPassword = password_verify($password, $userData['password'] ?? '');
+        if(is_array($userInfo)){
+            $correctPassword = password_verify($password, $userInfo['password'] ?? '');
             if($correctPassword){
-                $_SESSION['logado'] = true;
+                $_SESSION['login_on'] = true;
                 header('Location: /');
                 return ;
             }

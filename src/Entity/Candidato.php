@@ -5,17 +5,17 @@ namespace App\Entity;
 class Candidato
 {
     public readonly int $id;
-    private ?string $curriculum;
-    private ?string $photo;
+    private ?string $curriculum = null;
+    private ?string $photo = null;
 
     public function __construct(
         public readonly string $name,
         public readonly int $idade,
         public readonly string $email,
-        public readonly string $phone,
-        public readonly ?string $profAnterior,
-        public readonly ?string $description,
-        public readonly ?string $comment
+        public readonly ?string $phone,
+        public readonly ?string $profAnterior = null,
+        public readonly ?string $description = null,
+        public readonly ?string $comment = null
     ){}
 
     public function setId(int $id): void
