@@ -1,4 +1,4 @@
-<?php require_once __DIR__ . "/cabecaslho.php"?>
+<?php require_once __DIR__ . "/cabecaslho.php";?>
 <main class="login-container">
     <h2>Fazer Login</h2>
     <form>
@@ -7,4 +7,4 @@
       <button type="submit">Entrar</button>
     </form>
 </main>
-<?php require_once __DIR__ . "/rodape.php"?>
+<?php require_once __DIR__ . "/rodape.php";?>
