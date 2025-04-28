@@ -19,6 +19,6 @@ class ControllerFormCandidato implements Controller
         if($id!==false && $id!==null){
             $candidato = $this->repository->find($id);
         }
-        require_once __DIR__ . "/../../views/view-form.php";
+        require_once __DIR__ . "/../Views/view-form.php";
     }
 }

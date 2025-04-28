@@ -12,7 +12,7 @@ class ControllerFormLogin implements Controller
             header('Location: /');  
             return ;
         }
-        require_once __DIR__ . '/../../views/view-login.php';
+        require_once __DIR__ . '/../Views/view-login.php';
     }
 }
     

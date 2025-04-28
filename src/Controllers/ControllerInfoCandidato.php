@@ -22,6 +22,6 @@ class ControllerInfoCandidato implements Controller
 
         $candidato = $this->repository->find($id);
 
-        require_once __DIR__ . '/../../views/view-info.php';
+        require_once __DIR__ . '/../Views/view-info.php';
     }
 }
