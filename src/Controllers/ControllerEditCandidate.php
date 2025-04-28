@@ -44,7 +44,7 @@ class ControllerEditCandidate implements Controller
 
         
         if($_FILES['photo']['error'] === UPLOAD_ERR_OK){
-            $nomeArquivo = uniqid(). $_FILES['photo']['name'];
+            $nomeArquivo = uniqid()."_".$_FILES['photo']['name'];
             move_uploaded_file(
                 $_FILES['photo']['tmp_name'],
                 __DIR__ . '/../../public/arquivos/' .  $nomeArquivo

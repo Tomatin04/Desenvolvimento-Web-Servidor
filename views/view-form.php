@@ -37,12 +37,12 @@
       </div>
 
       <div class="campo-form arquivos">
-        <label for="arquivo1">Adicionar Arquivo 1:</label>
+        <label for="arquivo1">Foto do Candidato:</label>
         <input type="file" accept="image/*" id="arquivo1" name="photo" />
       </div>
 
       <div class="campo-form arquivos">
-        <label for="arquivo2">Adicionar Arquivo 2:</label>
+        <label for="arquivo2">Curriculo do Candidato:</label>
         <input type="file" accept="/*" id="arquivo2" name="curriculum" />
       </div>
 

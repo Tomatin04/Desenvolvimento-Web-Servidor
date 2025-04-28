@@ -7,8 +7,8 @@
 </head>
 <body>
   <header class="cabecalho">
-    <div class="menu-icono" > <!-- onclick="alert('Menu clicado!')"-->
-      <a href="\">☰</a>
+    <div class="menu-icono" > <!-- onclick="alert('Menu clicado!')☰"-->
+      <a class="logout-btn" href="\">Home</a>
     </div>
     <div class="login-area">
       <a class="logout-btn" href="\login" class="login-link">Login</a>
