@@ -6,6 +6,11 @@
   <link rel="stylesheet" href="/css/style.css" />
 </head>
 <body>
+<?php
+if (isset($_GET['msg'])) {
+    $msg = $_GET['msg'];
+    echo "<script>alert('$msg');</script>";}
+    ?>
   <header class="cabecalho">
     <div class="menu-icono" > <!-- onclick="alert('Menu clicado!')☰"-->
       <a class="logout-btn" href="\">Home</a>

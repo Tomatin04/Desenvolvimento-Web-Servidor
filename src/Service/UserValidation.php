@@ -18,6 +18,6 @@ class UserValidation
                 return ;
             }
         }
-        header('Location: /login?error=0');
+        header('Location: /login?error=0&msg=Erro: Usuário ou senha incorretos');
     }
 }

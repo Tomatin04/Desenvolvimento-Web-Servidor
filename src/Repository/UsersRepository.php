@@ -13,6 +13,8 @@ class UsersRepository
         $stmt = $this->pdo->prepare("SELECT * FROM users WHERE email = :email");
         $stmt->bindValue(':email', $email);
         $stmt->execute();
-        return $stmt->fetch();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+        if(!$result) return null;
+        return $result;
     }
 }
