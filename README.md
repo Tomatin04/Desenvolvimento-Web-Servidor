@@ -1,3 +1,8 @@
+# PARTICIPAENTES
+
+- Matheus Sampaio Rebelato
+    RA: 2509849
+
 # Desenvolvimento-Web-Servidor
 O projeto do trabalho para a matéria  Desenvolvimento Web-Servidor 
 
@@ -24,3 +29,18 @@ Outro objetivo é adicionar um sistema de verificação de candidatos presentes 
 os usuários indicam, com base nos perfis dos candidatos, quais são os melhores candidatos para aquele vaga espesifica.
 
 Também terá um pequeno sistema de ranking dos candidatos, para saber se eles devem permanecer no sistema, ou serem descartados.
+
+# Instruções para uso da aplicação
+A aplicação foi inicializada e testada em terminal, para evitar a instalação de outras plataformas para rodar o projeto. Usando o comando "php -S localhost:8080 -t public",
+no terminal da pasta, é iniciado um servidor php temporariamente para poder rodar a aplicação.
+
+Como no momento não foram implmentados os sistemas de admin, um registro que pode ser usado para realizar o login é 
+    EMAIL: teste@teste.com    
+    PASSWORD: 123456
+Assim, é possivel acessar o sistema e suas funcionalidades
+
+Também é necessario tem o Composer instalado no sistema, já que o programa usa do seu sistema de autoload para poder inciar  o programa. Também na propria linha de comando,
+deve ser usado o comando "composer dumpautoload", para carregar o autoload do composer
+
+# Bugs e Features
+Atualmente, não tem nehuma tratativa de erro se o usuário tentar ir para uma pagina não mapeada, mas como o sistema está bem mapeado, a principio, não tem porque se preocupar com está situação
