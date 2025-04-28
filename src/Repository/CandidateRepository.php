@@ -87,6 +87,14 @@ class CandidateRepository
         return $stmt->execute();
     }
 
+    public function findFiles(int $id): ?array
+    {
+        $stmt = $this->pdo->prepare("SELECT curriculum, photo FROM candidate WHERE id = :id");
+        $stmt->bindValue(':id', $id, \PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     private function hydrate(array $candidatoData): Candidato
     {
         $candidato = new Candidato($candidatoData['name'], $candidatoData['idade'], $candidatoData['email'], $candidatoData['phone'], $candidatoData['prof_anterior'], $candidatoData['description'], $candidatoData['comment']);

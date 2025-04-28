@@ -4,6 +4,7 @@ declare(strict_types=1);
 namespace App\Controllers;
 
 use App\Repository\CandidateRepository;
+use App\Service\RemoveFilesCandidato;
 
 class ControllerDeleteCandidate implements Controller
 {
@@ -16,6 +17,8 @@ class ControllerDeleteCandidate implements Controller
             header('Location: /?sucesso=0');
             exit();
         }
+        $filesRemove = new RemoveFilesCandidato();
+        $filesRemove->removeFiles($id, $this->repository);
 
         if(!$this->repository->delete($id)){
             header('Location: /?sucesso=0');

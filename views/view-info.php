@@ -17,9 +17,11 @@
         <div class="arquivos-enviados">
         <h3>Curriculo Enviado</h3>
         <ul>
-            <li><a href="#">Currículo.pdf</a></li>
+            <li><a href="/arquivos/<?= $candidato->getCurriculum();?>" download="<?= substr($candidato->getCurriculum(), strpos($candidato->getCurriculum(), "_") + 1);?>">Currículo.pdf</a></li>
         </ul>
         </div>
     </div>
 </main>
 <?php require_once __DIR__ . "/rodape.php"?>
+
+    
