@@ -9,20 +9,22 @@
 
     <!-- Lista de perfis -->
     <div class="lista-pessoas">
-        <div class="card-perfil">
-        <img src="https://via.placeholder.com/100" alt="Imagem de Perfil" />
-        <div class="info-perfil">
-            <h3>João da Silva</h3>
-            <p>Cargo: Desenvolvedor</p>
-            <div class="acoes-card">
-            <button>Alterar</button>
-            <button>Remover</button>
-            <button>Remover Imagem</button>
+        <?php foreach($candidatos as $candidato):  ?>
+            <div class="card-perfil">
+            <img src="/arquivos/<?= $candidato->getPhoto(); ?>" alt="Imagem de Perfil" style="width: 23%"/>
+            <div class="info-perfil">
+                <h3><?= $candidato->name ?></h3>
+                <p>Cargo Anterior: <?= $candidato->profAnterior?> </p>
+                <div class="acoes-card">
+                <button><a href="/editar-candidato?id=<?= $candidato->id?>" >Alterar</a></button>
+                <button><a href="/remove-candidato?id=<?= $candidato->id?>" >Remover</a></button>
+                <button><a href="/rphoto-candidato?id=<?= $candidato->id?>" >Remover Imagem</a></button>
+                <button><a href="/info-candidato?id=<?= $candidato->id?>" >Visualizar</a></button>
+                </div>
             </div>
-        </div>
-        </div>
-
-        <!-- Adicione mais perfis aqui -->
+            </div>
+        <?php endforeach; ?>
+            <!-- Adicione mais perfis aqui -->
     </div>
 </main>
 <?php require_once __DIR__ . "/rodape.php"?>

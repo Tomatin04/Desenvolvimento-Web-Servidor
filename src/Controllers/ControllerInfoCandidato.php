@@ -7,18 +7,21 @@ namespace App\Controllers;
 use App\Repository\CandidateRepository;
 use App\Entity\Candidato;
 
-class ControllerFormCandidato implements Controller
+
+class ControllerInfoCandidato implements Controller
 {
     public function __construct(private CandidateRepository $repository){}
 
     public function request(): void
     {
         $id = filter_input(INPUT_GET, 'id', FILTER_VALIDATE_INT);
-        /** @var Candidato $candidato */
-        $candidato = null;
-        if($id!==false && $id!==null){
-            $candidato = $this->repository->find($id);
+        if(!$id || is_null($id)){
+            header('Location: /?sucesso=0');
+            exit();
         }
-        require_once __DIR__ . "/../../views/view-form.php";
+
+        $candidato = $this->repository->find($id);
+
+        require_once __DIR__ . '/../../views/view-info.php';
     }
 }

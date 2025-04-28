@@ -7,6 +7,7 @@
 
 a {
   text-decoration: none;
+  color: white;
 }
 /* Cabeçalho */
 .cabecalho {
@@ -357,4 +358,83 @@ a {
 
 .login-container button:hover {
   background-color: #333;
+}
+
+.visualizacao-container {
+  display: flex;
+  justify-content: center;
+  padding: 40px;
+  font-family: Arial, sans-serif;
+}
+
+.dados-candidato {
+  background-color: #f5f5f5;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 30px;
+  max-width: 700px;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+.dados-candidato h2 {
+  margin-bottom: 20px;
+  font-size: 24px;
+}
+
+.dados-candidato p {
+  font-size: 16px;
+  margin-bottom: 12px;
+}
+
+.dados-candidato strong {
+  color: #1f1f1f;
+}
+
+.arquivos-enviados {
+  margin-top: 30px;
+}
+
+.arquivos-enviados h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.arquivos-enviados ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.arquivos-enviados a {
+  text-decoration: none;
+  color: #1f1f1f;
+}
+
+.arquivos-enviados a:hover {
+  text-decoration: underline;
+}
+
+.foto-perfil {
+  position: absolute;
+  top: 30px;
+  right: 30px;
+  width: 120px;
+  height: 120px;
+  border: 3px solid #1f1f1f;
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: white;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.foto-perfil img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Ajuste necessário para o card suportar posição absoluta */
+.dados-candidato {
+  position: relative;
+  padding-right: 170px; /* espaço para não sobrepor a foto */
 }

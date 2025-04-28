@@ -17,6 +17,7 @@ class ControllerListCandidate implements Controller
 
     public function request(): void
     {
+        $candidatos = $this->repository->findAll();
         require_once __DIR__ . "/../../views/view-list.php";
     }
 }

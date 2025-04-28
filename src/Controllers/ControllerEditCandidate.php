@@ -1,20 +1,23 @@
 <?php
-
-declare(strict_types = 1);
+declare(strict_types=1);
 
 namespace App\Controllers;
 
-use App\Entity\Candidato;
 use App\Repository\CandidateRepository;
+use App\Entity\Candidato;
 
-class ControllerInsertCandidate implements Controller
+class ControllerEditCandidate implements Controller
 {
-
     public function __construct(private CandidateRepository $repository){}
 
     public function request(): void
     {
-        
+        $id = filter_input(INPUT_GET, "id", FILTER_VALIDATE_INT);
+        if(!$id){
+            header('Location: /?sucesso=0');
+            exit();
+        }
+
         $name = filter_input(INPUT_POST,"name");
         if(!$name){
             header('Location: /?sucesso=0');
@@ -36,7 +39,10 @@ class ControllerInsertCandidate implements Controller
         $comment = filter_input(INPUT_POST,"comment");
 
         $candidato = new Candidato($name, $idade, $email, $phone, $profAnterior, $description, $comment);
+        $candidato->setId($id);
 
+
+        
         if($_FILES['photo']['error'] === UPLOAD_ERR_OK){
             $nomeArquivo = uniqid(). $_FILES['photo']['name'];
             move_uploaded_file(
@@ -57,8 +63,8 @@ class ControllerInsertCandidate implements Controller
             $candidato->setCurriculum($nomeArquivo);
         }
 
-        $acao = $this->repository->add($candidato);
-        if(!$acao){
+        
+        if(!$this->repository->update($candidato)){
             header('Location: /?sucesso=0');
         }else{
             header('Location: /?sucesso=1');
