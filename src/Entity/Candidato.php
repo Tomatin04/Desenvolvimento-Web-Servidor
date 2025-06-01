@@ -18,6 +18,9 @@ class Candidato
         public readonly ?string $comment = null
     ){}
 
+    
+
+
     public function setId(int $id): void
     {
         $this->id = $id;

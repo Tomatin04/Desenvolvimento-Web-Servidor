@@ -28,12 +28,12 @@
 
       <div class="campo-form">
         <label for="descricao">Descrição do Candidato:</label>
-        <textarea id="descricao" name="description" rows="4" value="<?= $candidato->description?>" ></textarea>
+        <textarea id="descricao" name="description" rows="4" ><?= $candidato->description?></textarea>
       </div>
 
       <div class="campo-form">
         <label for="comentario">Comentário:</label>
-        <textarea id="comentario" name="comment" rows="4" value="<?= $candidato->comment?>"></textarea>
+        <textarea id="comentario" name="comment" rows="4" ><?= $candidato->comment?></textarea>
       </div>
 
       <div class="campo-form arquivos">
